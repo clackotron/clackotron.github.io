@@ -1,6 +1,7 @@
 ---
-title: "Configuration: modules.json"
-permalink: /docs/config/config-modules
+title: "Config: modules.json"
+permalink: /docs/config-modules
+parent: "Configuration"
 nav_order: 3
 ---
 

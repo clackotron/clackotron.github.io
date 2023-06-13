@@ -14,16 +14,21 @@ In short, the project consists of the following parts:
 * [Firmware](https://github.com/clackotron/clackotron_firmware) - A firmware for the ESP32 on the hardware based on PlatformIO and ESP32/Arduino.
 * [Webinterface](https://github.com/clackotron/clackotron_webinterface) - A Svelte.js based webinterface that can be built and uploaded with the firmware to have a graphical user interface for the device.
 
-[LINK FOR ASSEMBLED MODULES]
-
 ---
 
 This repository serves as the documentation for all parts of the project.
 
 ### Contents
 * [User manual](docs/user-manual.md)
-* Configuration files
+* [Configuration files](docs/config.md)
   * [`modules.json`](docs/config-modules.md)
+  * [`timezone.json`](docs/config-timezone.md)
+  * [`webinterface.json`](docs/config-webinterface.md)
+* [Additional documentation](docs/misc.md)
+  * [Template Format](docs/misc-templates.md)
+  * [Webinterface & API](docs/misc-api-docs.md)
+* [Specific use cases](docs/uc.md)
+  * [Rewriting module address](docs/uc-rewrite-address.md)
 
 ---
 
