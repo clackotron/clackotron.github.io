@@ -1,3 +1,9 @@
+---
+title: "Configuration: modules.json"
+permalink: /docs/config/config-modules
+nav_order: 3
+---
+
 # Configuration: `modules.json`
 The `modules.json` file contains the configuration that informs Clackotron 2000 about the connected modules. Each SBB split flap module has its own distinct address. If you have multiple modules with the same address, disconnect one of them first and rewrite the address [TODO: Link on how to]
 

@@ -1,3 +1,9 @@
+---
+title: User Manual
+permalink: /docs/user-manual
+nav_order: 2
+---
+
 # Clackotron 2000 User Manual
 This user manual covers the whole process of building and programming a device. If you have bought a completed, pre-programmed PCB or Clackotron assembly, you may skip to the [Setup](#setup) step below.
 
