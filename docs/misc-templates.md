@@ -20,7 +20,8 @@ The following template parameters are possible:
 * `{mm}` - The current minute in 2 digits (e.g. `12`)
 * `{ss}` - The current second in 2 digits (e.g. `12`)
 
-**Watch out:** The `{ss}` parameter is supported but not recommended. The split-flap modules are not fast enough to update every second, especially not on rollover.
+{: .watchout}
+The `{ss}` parameter is supported but not recommended. The split-flap modules are not fast enough to update every second, especially not on rollover.
 
 To allow for configurable modes, the following parameters are also supported:
 * `{tx:n}` - A custom text input, where `x` is a number from 0-9 and `n` is the length of the text.

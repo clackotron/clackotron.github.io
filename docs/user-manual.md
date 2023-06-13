@@ -30,6 +30,8 @@ ID | Description
 (8) | Battery holder for real time clock (RTC) to keep time.
 
 ## Wiring the hardware
+
+{: .warning }
 **Always** disconnect your power supply before working on the hardware and/or wiring components!
 
 There are two things that don't come with the Clackotron 2000 hardware. The 30V DC power supply (PSU) and the SBB split flap modules. As such, the harware has connectors for wiring to these components.
