@@ -81,6 +81,7 @@ Of course, you may use any other way of running the PlatformIO project, if you'r
 
 In VS Code, the PlatformIO extension will automatically detect the `platformio.ini` and offer you the possibility to perform all the required actions.
 
+{: .bordered}
 ![../assets/software-piotasks.png](../assets/software-piotasks.png)
 
 Connect the Clackotron Hardware with the pinout shown below and then run `Platform > Upload Filesystem Image` and `General > Upload`. After this, the device will be ready to go.
@@ -96,6 +97,7 @@ Pin | Description
 5 | EN
 6 | GND
 
+{: .bordered}
 ![../assets/hardware-progconn.png](../assets/hardware-progconn.png)
 
 If it is not behaving as expected, use the `General > Upload and Monitor` option to get the serial log from the device for further debugging.
@@ -119,16 +121,19 @@ Make sure the correct update type is selected, otherwise the device might not be
 ## Connecting to your home WiFi network
 The Clackotron 2000 uses the [WiFi manager](https://github.com/tzapu/WiFiManager) library to allow the user to easily connect it to an existing WiFi network. When the Clackotron 2000 is first started (or no WiFi network has been configured yet), it will create a WiFi hotspot called `Clackotron2000`.
 
+{: .bordered}
 ![../assets/setup-wifi-1.png](../assets/setup-wifi-1.png)
 
 You can connect to this hotspot using any WiFi capable device such as your Android or iOS mobile phone or a laptop. After connecting, you should automatically be redirected to the captive portal that allows you to configure the WiFi settings. If you are not automatically redirected, open `http://192.168.4.1` in your browser to access the WiFi manager.
 
+{: .bordered}
 ![../assets/setup-wifi-2.png](../assets/setup-wifi-2.png)
 
 Select the `Configure WiFi` option from the WiFi manager screen.
 
 Select the name of your WiFi access point from the list or enter it in the `SSID` field. Enter the password of your WiFi access point in the `Password` field and click "Save".  
 
+{: .bordered}
 ![../assets/setup-wifi-3.png](../assets/setup-wifi-3.png)
 
 After saving the WiFi configuration, the Clackotron 2000 will connect to your home WiFi network.
@@ -147,4 +152,13 @@ When accessing the IP address in your browser, you should be greeted with the Cl
 ![../assets/software-webinterface.png](../assets/software-webinterface.png)
 
 ## Configuring the device
-By default, the Clackotron is configured to use 4 modules in a 2-line configuration with the serial numbers `1,2` and `3,4` respectively. You will most likely need to update the configuration 
+By default, the Clackotron 2000 is configured to use 4 modules in a 2-line configuration with the serial numbers `1,2` and `3,4` respectively. You will most likely need to update the configuration to fit your module arrangement. For this, the following steps are necessary:
+
+1. Enable the config mode on the device by holding the config button for >5s until the LED lights up.
+2. Adjust the [`modules.json` configuration](config-modules.md) to match your module arrangement.
+  * Navigate to `http://clackotronip:8080/edit?file=modules` and make the necessary changes.
+3. Adjust the [`webinterface.json` configuration](config-webinterface.md) to match the number of modules you have.
+  * Navigate to `http://clackotronip:8080/edit?file=webinterface` and make the necessary changes.
+  * Adjust the text template `{t1:4}` to support the number of modules you have ()`{t1:n}` where `n` is the number of modules).
+  * Adjust all other [templates](misc-templates.md) however you want them to be displayed depending on your module arrangement.
+4. Reboot the device, your Clackotron 2000 is now ready to be used! 🎉 

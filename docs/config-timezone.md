@@ -8,7 +8,7 @@ nav_order: 3
 # Configuration: `timezone.json`
 The `timezone.json` file contains the configuration that informs Clackotron 2000 about the current timezone, daylight savings time changes, as well as the ntp server to sync time with and the day names to display.
 
-The `timezone.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://ip:8080/edit?file=timezone`. When editing directly on the device, you must manually reboot the device after editing.
+The `timezone.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://clackotronip:8080/edit?file=timezone`. When editing directly on the device, you must manually reboot the device after editing.
 
 ## File format
 The `timezone.json` file contains a JSON object with multiple keys:

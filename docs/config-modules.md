@@ -8,7 +8,7 @@ nav_order: 3
 # Configuration: `modules.json`
 The `modules.json` file contains the configuration that informs Clackotron 2000 about the connected modules. Each SBB split flap module has its own distinct address. If you have multiple modules with the same address, disconnect one of them first and rewrite the address [TODO: Link on how to]
 
-The `modules.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://ip:8080/edit?file=modules`. When editing directly on the device, you must manually reboot the device after editing.
+The `modules.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://clackotronip:8080/edit?file=modules`. When editing directly on the device, you must manually reboot the device after editing.
 
 ## File format
 The `modules.json` file contains a JSON object with a single key `"modules"`. This key expects a list of list of addresses (a two-dimensional array).

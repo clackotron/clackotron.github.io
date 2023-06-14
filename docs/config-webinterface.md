@@ -8,7 +8,7 @@ nav_order: 3
 # Configuration: `webinterface.json`
 The `webinterface.json` file is loaded by the webinterface to configure what options and buttons are displayed to the user and what strings are used for displaying text.
 
-The `webinterface.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://ip:8080/edit?file=webinterface`. When editing directly on the device, you must manually reboot the device after editing.
+The `webinterface.json` file can be edited on your computer and uploaded as part of the filesystem via PlatformIO or directly on the device by enabling the config mode and opening `http://clackotronip:8080/edit?file=webinterface`. When editing directly on the device, you must manually reboot the device after editing.
 
 ## File format
 The `webinterface.json` file contains a JSON object with multiple keys:
