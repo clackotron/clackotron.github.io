@@ -19,6 +19,7 @@ The following template parameters are possible:
 * `{hh}` - The current hour in 2 digits (e.g. `10`)
 * `{mm}` - The current minute in 2 digits (e.g. `12`)
 * `{ss}` - The current second in 2 digits (e.g. `12`)
+* For variants of these for hour and minute modules, see [Module Suffixes](#module-suffixes)
 
 {: .watchout}
 The `{ss}` parameter is supported but not recommended. The split-flap modules are not fast enough to update every second, especially not on rollover.
@@ -45,3 +46,27 @@ Zürich Hauptbahnhof
 ```
 
 If a template results in a value that is longer than the amount of aviable modues, the overlapping part is simply cut off. For example, attempting to display `{hh}.{mm}` on a device with 4 letter modules, will show `12.2` instead of `12.23`.
+
+## Module Suffixes
+The generic templates listed above such as `{DD}` or `{YYYY}` work with alphanumeric modules. This means, `{YYYY}` will be expanded into four digits (e.g. `2023`) which will be sent to four different modules.
+
+The original set of moduels includes special modules for hours and minutes which have special flaps for `00-23` and `00-59` respectively. To use these, there is a set of special suffix templates that are listed below. Using these allows sending information as one value directly to an hour or minute module. (E.g. `{DD}` will not be sent as `12` to two modules but will be sent as `<the flap value for 12>` directly to one module).
+
+For hour modules (can only display `0.` - `23.`):
+* `{YY_h}` - The current year in 2 digits (e.g. `22`)
+* `{MM_h}` - The current month in 2 digits (e.g. `08`)
+* `{DD_h}` - The current day in 2 digits (e.g. `15`)
+* `{hh_h}` - The current hour in 2 digits (e.g. `01`)
+* `{mm_h}` - The current minute in 2 digits (e.g. `12`)
+* `{ss_h}` - The current seconds in 2 digits (e.g. `21`)
+
+For minute modules (can only display `0` - `59`):
+* `{YY_m}` - The current year in 2 digits (e.g. `22`)
+* `{MM_m}` - The current month in 2 digits (e.g. `08`)
+* `{DD_m}` - The current day in 2 digits (e.g. `31`)
+* `{hh_m}` - The current hour in 2 digits (e.g. `20`)
+* `{mm_m}` - The current minute in 2 digits (e.g. `47`)
+* `{ss_m}` - The current seconds in 2 digits (e.g. `53`)
+
+{: .watchout}
+Due to the nature of these modules, not all possible values can be properly displayed!
